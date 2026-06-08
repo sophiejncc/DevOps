@@ -26,15 +26,15 @@ def test_status_update():
 def test_invalid_impact_raises_error():
     with pytest.raises(ValueError) as exc_info:
         Idea("Bad idea", impact = 6, resource = 3, alignment = 3)
-    assert "Impact" in str(exc_info.value)
+    assert "impact" in str(exc_info.value)
 
 def test_invalid_resource_raises_error():
     with pytest.raises(ValueError) as exc_info:
         Idea("Bad idea", impact = 3, resource = 0, alignment = 3)
-    assert "Resource" in str(exc_info.value)
+    assert "resource" in str(exc_info.value)
 
 
 def test_invalid_alignment_raises_error():
     with pytest.raises(ValueError) as exc_info:
         Idea("Bad idea", impact = 3, resource = 3, alignment = 10)
-    assert "Alignment" in str(exc_info.value)
+    assert "alignment" in str(exc_info.value)
