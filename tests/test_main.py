@@ -1,5 +1,6 @@
 from src.idea import Idea
 from src.engine import DecisionEngine
+import pytest
 
 # Arrange
 # Act
@@ -37,4 +38,3 @@ def test_invalid_alignment_raises_error():
     with pytest.raises(ValueError) as exc_info:
         Idea("Bad idea", impact = 3, resource = 3, alignment = 10)
     assert "Alignment" in str(exc_info.value)
-    
