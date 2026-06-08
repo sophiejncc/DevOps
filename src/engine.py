@@ -19,3 +19,7 @@ class DecisionEngine:
                 idea.status = "Under Review"
             else:
                 idea.status = "Rejected"
+
+    def prioritise(self) -> List [Idea]:
+        return sorted(self.ideas, key=lambda x: x.score(), reverse=True)
+    
