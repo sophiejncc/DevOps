@@ -1,3 +1,6 @@
+from src.idea import Idea
+from src.engine import DecisionEngine
+
 # Arrange
 # Act
 # Assert
